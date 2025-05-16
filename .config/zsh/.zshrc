@@ -97,7 +97,7 @@ try() {
 
 pbl() {
     echo "$@"|xclip -r -selection clipboard
-}
+} 
 
 path() {
     printf '"%s"' "$(readlink -f "$*" | tr -d '\n')" | wl-copy;
