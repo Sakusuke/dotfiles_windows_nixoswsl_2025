@@ -23,16 +23,24 @@
 
   nixpkgs.config.allowUnfree = true;
   environment.systemPackages = with pkgs; [
-    git gh yadm wget
+    git gh yadm wget curl
     vim neovim
     neofetch
-    htop
+    htop 
     
     ## File management
     ncdu
     vimv
     trash-cli
     lf
+
+    ## idk random shit im testing
+    yt-dlp jq
+    ffmpeg
+
+    (python3.withPackages (ps: with ps; [
+      ytmusicapi
+    ]))
   ];
 
     # Variables
